@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    background: url('garden3.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        background-attachment: scroll; /* Change to scroll for mobile devices */
+    }
+}
+    color: white;
+    padding: 100px 20px;
+    font-size: 2em;
+    animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.album div {
+    position: relative;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.album img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.album img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.album div span {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.features, .contact, .packages, .reviews, .availability {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.social-buttons a {
+    display: inline-block;
+    margin: 10px;
+}
+
+.social-buttons img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-buttons img:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.package {
+    margin: 30px auto;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.night-out, .day-out {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.day-out {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+    
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    header, .packages, .features, .contact, .reviews, .availability {
+        padding: 30px;
+        font-size: 18px;
+    }
+    .album img {
+        width: 100%;
+        max-width: 450px;
+    }
+    .back-button {
+        padding: 12px 18px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header, .packages, .features, .contact, .reviews, .availability {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .album img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .back-button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+}
