@@ -15,12 +15,19 @@ body {
 
 header {
     background: url('garden3.jpg') no-repeat center center/cover;
+    background-attachment: scroll; /* Adjusts scrolling behavior for better compatibility */
     color: white;
     padding: 100px 20px;
     font-size: 2em;
     animation: slideDown 1s ease-in-out;
-    background-attachment: scroll; /* Use scroll instead of fixed for better compatibility */
 }
+
+@media only screen and (max-width: 1024px) {
+    header {
+        padding: 50px 10px; /* Adjust padding on smaller devices for better viewing */
+    }
+}
+
 
 @media only screen and (max-width: 1024px) {
     header {
