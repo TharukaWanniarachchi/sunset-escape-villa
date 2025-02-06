@@ -22,25 +22,17 @@
         }
 
         header {
-            position: relative;
+            background: url('garden3.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
             color: white;
             padding: 100px 20px;
             font-size: 2em;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            animation: slideDown 1s ease-in-out;
         }
 
-        header img.background-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         .album {
@@ -99,12 +91,12 @@
         .social-buttons a {
             display: inline-block;
             margin: 10px;
-            border-radius: 50%;
         }
 
         .social-buttons img {
             width: 50px;
             height: 50px;
+            border-radius: 50%;
             transition: transform 0.3s ease-in-out;
         }
 
@@ -122,11 +114,6 @@
 </head>
 <body>
     <header>
-        <img srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
-             sizes="(max-width: 600px) 480px, 800px"
-             src="elva-fairy-800w.jpg"
-             alt="Elva dressed as a fairy"
-             class="background-image">
         <h1>Sunset Escape</h1>
         <p>Luxury Villa in Homagama</p>
     </header>
@@ -195,4 +182,13 @@
         <a href="https://www.instagram.com/sunset_escape_?igsh=ZDZ4Ym9ycmFsb3h4" target="_blank">
             <img src="instagram-icon.png" alt="Instagram">
         </a>
-        <a href="https://www.google.com/search?client=mobilesearchapp&sca_esv=19b551ade1306bfb&bih=797&biw=390&channel=iss&cs=0&hl=en_GB&rlz=1MDAPLA_en-GBLK1036LK1037&v=329.0.660098639&sxsrf=ADLYWIKilrnViA-JyOIdEcXUHRAQ_mo1Lg%3A1724174907001&q=Sunset%20Escape&ludocid=2770399640824817501&ibp=gwp%3B0%2C7&gsas=1&lsig=AB86z5Vaz3024pBF4WGem957FvHF&shndl=-1&shem=lrnolc
+        <a href="https://www.google.com/search?client=mobilesearchapp&sca_esv=19b551ade1306bfb&bih=797&biw=390&channel=iss&cs=0&hl=en_GB&rlz=1MDAPLA_en-GBLK1036LK1037&v=329.0.660098639&sxsrf=ADLYWIKilrnViA-JyOIdEcXUHRAQ_mo1Lg%3A1724174907001&q=Sunset%20Escape&ludocid=2770399640824817501&ibp=gwp%3B0%2C7&gsas=1&lsig=AB86z5Vaz3024pBF4WGem957FvHF&shndl=-1&shem=lrnolc%2Clsde%2Cvslcca&source=sh%2Fx%2Floc%2Fact%2Fm1%2F5&kgs=107751d7f0ae74a9" target="_blank">
+            <img src="google-maps.png" alt="Google Maps">
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sunset Escape, Homagama. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
